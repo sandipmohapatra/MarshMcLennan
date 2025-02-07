@@ -1,0 +1,16 @@
+constrains :-
+1)Primary key :- unique key + not null
+2)check :- it is used to check the value or condition.
+example:- age should be greater than 18 to vote
+
+CREATE TABLE student1 (
+    Id INT PRIMARY KEY ,
+    name VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Phone VARCHAR(255) UNIQUE NOT NULL,
+    Address varchar(50),
+     Salary INT check (salary > 20000));
+
+
+
+
