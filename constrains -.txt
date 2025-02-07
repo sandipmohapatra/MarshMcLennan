@@ -36,3 +36,18 @@ CREATE TABLE Orders13 (
     OrderNumber int NOT NULL,
     OrderDate TIMESTAMP DEFAULT (now()));
 
+----------------------------------------------------------------------------
+Foreign key
+------------------------
+parent table or Master table
+-----------------------------------------------
+create table bank(accno int primary key,name varchar(30),balance float);
+------------------------------------------------------------------------------
+child table
+-------------------------
+CREATE TABLE bankcustomer (
+accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno),
+    FirstName varchar(255),
+    Age int);
+--------------------------------------------------------
