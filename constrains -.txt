@@ -90,9 +90,12 @@ joins
 ---------------
 select a.accno,a.name,a.balance,b.Firstname,b.age from bank a,bankcustomer b where a.accno=b.accno;
 ---------------------------------------------------------------------------------
+index:-primary key, unique key are auto indexed.
 
+CREATE INDEX idx_accno ON bank (accno);
 
-
+if we create index on a column then retrieval of data will be faster.
+---------------------------------------------------------------------------------------
 
 
 
