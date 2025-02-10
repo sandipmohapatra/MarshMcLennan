@@ -105,6 +105,11 @@ select * from abc;
 create view xyz as select accno,name,balance from bank;
 
 we can do insert, update or delete for single table.
+
+create view pqr as select accno,balance from bank;
+
+insert into pqr values(106,67220);
+
 ------------------------------------------------------------------------
 
 
