@@ -12,7 +12,7 @@ CREATE TABLE student1 (
     Address varchar(50),
      Salary INT check (salary > 20000));
 
------------------------
+---------------------------------------------------------------------------
 CREATE TABLE Persons11 (
     ID int NOT NULL,
     LastName varchar(255) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE Persons11 (
     City varchar(255),
     CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Bangalore')
 );
----------------------
+-------------------------------------------------------------------------
 
 CREATE TABLE Persons12 (
     ID int NOT NULL,
@@ -47,7 +47,26 @@ child table
 -------------------------
 CREATE TABLE bankcustomer (
 accno int,
-    FOREIGN KEY (accno) REFERENCES bank(accno),
+    FOREIGN KEY (accno) REFERENCES bank(accno) ,
+    FirstName varchar(255),
+    Age int);
+-------------------------------------------------------------------
+*We cannot update or delete the master table .
+*To do update or delete we have to use Cascade
+------------------------------------------------------------------ 
+child table
+-------------------------
+CREATE TABLE bankcustomer (
+accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON DELETE CASCADE,
+    FirstName varchar(255),
+    Age int);
+--------------------------------------------------------
+child table
+-------------------------
+CREATE TABLE bankcustomer (
+accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON UPDATE CASCADE,
     FirstName varchar(255),
     Age int);
 --------------------------------------------------------
