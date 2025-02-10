@@ -116,12 +116,27 @@ group by
 create table emp(empno int, name varchar(30),salary float, dept varchar(30));
 insert into emp values(105,'suni',77000,'tester');
 
-select dept,count(*) from emp group by dept;
+select dept, count(*) from emp group by dept;
 
-select dept,max(salary) from emp group by dept;
+select dept, max(salary) from emp group by dept;
 
-select dept,min(salary) from emp group by dept;
+select dept, min(salary) from emp group by dept;
 
- select dept,sum(salary) from emp group by dept;
+ select dept, sum(salary) from emp group by dept;
 ------------------------------------------------------------------------------
+select * from emp order by name;
+select * from emp order by name asc;
+select * from emp order by name desc;
+-----------------------------------------------------------------------------
+in place of where clause we will be using having clause(condition)
+-----------------------------------------------------------------------------
+select dept, min(salary) from emp group by dept having min(salary) > 50000;
+select address, avg(salary) from emp group by address having avg(salary)>35000;
+select address, min(salary) from emp group by address having min(salary)>35000;
+select address, max(salary) from emp group by address having max(salary)>45000;
+select address, sum(salary) as total_salary from emp group by address having sum(salary) > 20000;
+----------------------------------------------------------------------------------------------------
+
+
+
 
