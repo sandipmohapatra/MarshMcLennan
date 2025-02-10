@@ -70,3 +70,32 @@ accno int,
     FirstName varchar(255),
     Age int);
 --------------------------------------------------------
+CREATE TABLE bankcustomer (
+accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON DELETE CASCADE,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON UPDATE CASCADE ,
+    FirstName varchar(255),
+    Age int);
+---------------------------------------------------------------------------
+CREATE TABLE bankcustomer (
+accno int,
+    FOREIGN KEY (accno) REFERENCES bank(accno) ON DELETE CASCADE 
+    ON UPDATE CASCADE ,
+    FirstName varchar(255),
+    Age int);
+------------------------------------------------------------------------------------------
+select DISTINCT accno,firstname,age from bankcustomer;
+----------------------------------------------------------------------------------
+joins
+---------------
+select a.accno,a.name,a.balance,b.Firstname,b.age from bank a,bankcustomer b where a.accno=b.accno;
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
