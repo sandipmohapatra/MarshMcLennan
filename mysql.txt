@@ -568,11 +568,15 @@ CREATE TABLE Orders1 (
     ID int NOT NULL,
     OrderNumber int NOT NULL,
     OrderDate TIMESTAMP DEFAULT (Current_date));
+
+insert into orders1(id,ordernumber) values(103,334);
 -----------------------------------------------
-CREATE TABLE Orders1 (
+CREATE TABLE Orders11 (
     ID int NOT NULL,
     OrderNumber int NOT NULL,
     OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+insert into orders11(id,ordernumber) values(103,334);
 --------------------------------------------------------------------------------------
 insert into orders(id,ordernumber) values(101,1001);
 ---------------------------------------------------------------------------------------------
