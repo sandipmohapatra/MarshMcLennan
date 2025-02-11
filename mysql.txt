@@ -647,7 +647,7 @@ SELECT SUM(Quantity) FROM Products;
 SELECT * FROM Products
 WHERE Country IN ('India', 'Japan', 'China');
 ------------------------------------------------------------------------------
-SELECT * FROM Customers
+SELECT * FROM Products
 WHERE Country NOT IN ('India', 'Japan', 'China');
 --------------------------------------------------------------------------------------
 SELECT * FROM Customers
@@ -921,6 +921,7 @@ CONCAT(string1, string2, ...)
 Example:
 SELECT CONCAT('Hello', ' ', 'World') AS Result;
 -- Output: Hello World
+ SELECT CONCAT(firstname, ' ', age) AS Result from bankcustomer;
 --------------------------------------------------------------------------------------------
 2. CONCAT_WS()
 Concatenates strings with a specified separator.
