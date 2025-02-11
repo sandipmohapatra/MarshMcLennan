@@ -630,22 +630,21 @@ SELECT * FROM Customers
 WHERE Country='India'
 LIMIT 3;
 ---------------------------------------------------------------------------
-SELECT MIN(Price) AS SmallestPrice
-FROM Products; 
+create table products (productid int, price float, quantity int, country varchar(30));  
+insert into products values(101,10,10,'Japan');
+insert into products values(102,10,10,'India');
+
+SELECT MIN(Price) AS SmallestPrice FROM Products; 
 -----------------------------------------------------------------
-SELECT MAX(Price) AS LargestPrice
-FROM Products;
+SELECT MAX(Price) AS LargestPrice FROM Products;
 ------------------------------------------------------------------
-SELECT COUNT(ProductID)
-FROM Products;
+SELECT COUNT(ProductID) FROM Products;
 ------------------------------------------------------------------
-SELECT AVG(Price)
-FROM Products;
+SELECT AVG(Price) FROM Products;
 ------------------------------------------------------
-SELECT SUM(Quantity)
-FROM OrderDetails;
+SELECT SUM(Quantity) FROM Products;
 -----------------------------------------------------------
-SELECT * FROM Customers
+SELECT * FROM Products
 WHERE Country IN ('India', 'Japan', 'China');
 ------------------------------------------------------------------------------
 SELECT * FROM Customers
