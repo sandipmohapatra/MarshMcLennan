@@ -581,6 +581,7 @@ insert into orders11(id,ordernumber) values(103,334);
 insert into orders(id,ordernumber) values(101,1001);
 ---------------------------------------------------------------------------------------------
 ALTER TABLE Persons
+
 ALTER City SET DEFAULT 'Bangalore';
 ------------------------------------------------------------------
 ALTER TABLE Persons
@@ -620,8 +621,11 @@ SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NOT NULL;
 -------------------------------------------------------------------------------------
-SELECT * FROM Customers LIMIT 3;
+SELECT * FROM Customers LIMIT 3; //3 rows only will be displayed
 ---------------------------------------------------------------------
+clone a table
+create table bankcustomers as select * from bankcustomer;
+----------------------------------------------------------------------------------
 SELECT * FROM Customers
 WHERE Country='India'
 LIMIT 3;
